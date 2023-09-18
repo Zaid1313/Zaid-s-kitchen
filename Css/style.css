@@ -1,0 +1,327 @@
+/* css reset */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* Downloaded font  */
+/* @font-face {
+  font-family: "macbeth";
+  src: url("./Macbeth/MACBETH.psd") format("opentype");
+  src: url("./Macbeth/OpenType-SVG/Macbeth-Reguler.otf") format("opentype");
+} */
+
+/* Navbar container */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* navbar logo */
+#logo {
+  margin: 10px 25px;
+}
+
+#logo img {
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+/* navbar list items */
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 6px 25px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 495px) {
+  #navbar ul li a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+#navbar ul li a:hover {
+  color: red;
+  /* background-color: black; */
+}
+
+.right {
+  position: absolute;
+  right: 35px;
+  top: 14px;
+  display: inline-block;
+  /* border: 3px solid black; */
+}
+
+/* Home section */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 420px;
+  /* or height: 401px; */
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  background: url(../img/backimg.jpg) no-repeat center center/cover;
+  height: 118%;
+  /* or height: 120%; */
+  width: 100%;
+  z-index: -1;
+  opacity: 0.95;
+}
+
+#home h1 {
+  color: red;
+  font-size: 4.5rem;
+  /* padding: 5px;
+  padding-top: 3px; */
+  padding-bottom: 10px;
+  font-family: "macbeth";
+}
+
+#home h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+#home p {
+  color: white;
+  font-size: 2.5rem;
+  padding: 1px;
+}
+
+/* Services section */
+.services-container {
+  margin-top: 215px;
+  background-color: #b1b0b0;
+}
+
+#services {
+  display: flex;
+  margin: 15px;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+#services .box {
+  border: 2px solid red;
+  margin: 10px;
+  padding: 35px;
+  border-radius: 34px;
+  font-size: 18px;
+  background-color: #f0e4d2;
+}
+
+#services .box img {
+  display: block;
+  height: 160px;
+  margin: auto;
+}
+
+/* form button #contact form .btn {
+  border: 2px solid rgb(53, 47, 47);
+  background-color: #737373;
+  color: rgb(12, 3, 3);
+}
+
+#contact form .btn:hover {
+  background-color: red;
+} */
+
+/* Utility classes */
+.btn {
+  color: white;
+  background-color: transparent;
+  border: 2px solid red;
+  margin: 10px 5px;
+  width: 150px;
+  height: 40px;
+  font-weight: 580;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #737373;
+  /* border-color: red; */
+  /* color: red; */
+}
+
+@media screen and (max-width: 495px) {
+  .btn {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+/* right sign in button */
+
+.right .btn {
+  border: 2px solid white;
+}
+
+.right .btn:hover {
+  border-color: red;
+}
+
+.center {
+  text-align: center;
+}
+
+.h-primary {
+  font-size: 3rem;
+  padding: 12px;
+}
+
+.h-secondary {
+  font-size: 2rem;
+  padding: 12px;
+}
+
+/* Clients and partners section */
+
+#client-section {
+  /* border: 2px solid red; */
+  height: 390px;
+  padding-top: 2px;
+  /* background-color: #737373; */
+}
+
+#client-section::before {
+  content: "";
+  position: absolute;
+  background: url("../img/pizza.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: inherit;
+  z-index: -1;
+  opacity: 0.26;
+}
+
+@media screen and (min-width: 1950px) {
+  #client-section::before {
+    background: url("../img/pizza.jpg") no-repeat center center/cover;
+    opacity: 0.4;
+  }
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 65px;
+}
+
+@media screen and (max-width: 790px) {
+  #clients {
+    padding-right: 75px;
+  }
+}
+
+/* .client-item {
+   padding: 40px;
+} */
+
+.client-item img {
+  height: 200px;
+  border-radius: 500px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#zomato {
+  height: 150px;
+}
+
+#swiggy {
+  width: 350px;
+}
+
+/*@media screen and (max-width: 1200px), (min-width: 840px) {
+  #clients img {
+    height: 150px;
+    width: auto;
+    /* padding: 14px;
+    margin-left: 110px;
+    margin-right: 40px; */
+/*}
+}*/
+
+@media screen and (max-width: 1200px) {
+  #clients img {
+    height: 90px;
+    width: auto;
+    padding: 14px;
+    margin-left: 110px;
+    margin-right: 40px;
+  }
+}
+
+/* Contact section */
+#contact {
+  position: relative;
+  padding-top: 6px;
+}
+
+#contact::before {
+  content: "";
+  background: url(../client/contact4.jpg) no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.59;
+}
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+
+#contact-box form {
+  width: 40%;
+  font-size: 1.8rem;
+  font-weight: 530;
+}
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 4px;
+  font-size: 1rem;
+  /* border-radius: 9px; */
+}
+
+/* footer section */
+
+footer {
+  background: black;
+  color: red;
+  padding: 4px;
+}
